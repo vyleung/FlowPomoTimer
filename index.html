@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>FlowPomoTimer</title>
+  </head>
+  <link rel="icon" href="images/stopwatch.png" type="image/x-icon">
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+  <body>
+    <div class="stopwatch-container">
+      <div class="stopwatch"> 
+        <div class="notif">
+          <form id="userInput_interval">
+            <input type="number" id="duration" placeholder="0" title="Get notified every X minutes (enter a number)"></input><label>min</label>
+          </form>
+
+          <div class="stopwatch-controls">
+            <button class="cta start" type="button" value="start" id="start-button" title="Start timer"></button>
+            <button class="cta stop" type="button" value="stop" id="stop-button" title="Stop timer"></button>
+          </div>
+        </div>
+
+        <div class="stopwatch-timer">
+          <div class="time hours">00</div>
+          <div class="time minutes">00</div>
+          <div class="time seconds">00</div>
+          <div id="pomo-num" title="Number of pomodoro intervals"></div>
+        </div>
+
+        <audio id="alert-sound" src="ding.mp3" type="audio/mp3"></audio>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+  <script src="correctingInterval.min.js"></script>
+  <script src="main.js"></script>
+</html>
