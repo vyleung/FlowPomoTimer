@@ -80,8 +80,10 @@ $(document).ready(function() {
       reminderAlert = setCorrectingInterval(() => playSound(), parseInt(user_duration_min) * 60000);
     }
     else {
-      pause = true;
-      console.log("ERROR: enter an integer");
+      if (!user_duration_min == "") {
+        pause = true;
+        console.log("ERROR: enter an integer");
+      }
     }
   }
 
